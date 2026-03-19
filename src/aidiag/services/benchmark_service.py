@@ -43,6 +43,14 @@ SECTOR_BENCHMARKS: dict[str, dict[str, float]] = {
         "data": 2.1, "algorithms": 1.8, "governance": 2.0,
         "talent": 2.4, "process": 1.9, "strategy": 2.0,
     },
+    "Automotivo": {
+        "data": 3.0, "algorithms": 2.6, "governance": 2.4,
+        "talent": 2.5, "process": 3.0, "strategy": 2.7,
+    },
+    "Energia": {
+        "data": 2.6, "algorithms": 2.1, "governance": 2.3,
+        "talent": 2.0, "process": 2.4, "strategy": 2.3,
+    },
 }
 
 
