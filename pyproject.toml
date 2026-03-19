@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-industry-diagnostics"
+version = "0.1.0"
+description = "Plataforma de diagnóstico de maturidade em IA para o setor produtivo"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Jardel Vieira Alves", email = "jardel.va96@gmail.com" }]
+keywords = ["artificial-intelligence", "diagnostics", "industry", "maturity-assessment", "data-science"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "sqlalchemy>=2.0",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "python-jose[cryptography]>=3.3",
+    "passlib[bcrypt]>=1.7",
+    "python-multipart>=0.0.9",
+    "streamlit>=1.32",
+    "plotly>=5.20",
+    "pandas>=2.2",
+    "scikit-learn>=1.4",
+    "numpy>=1.26",
+    "httpx>=0.27",
+    "reportlab>=4.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.3", "pytest-asyncio>=0.23"]
+
+[project.scripts]
+aidiag-api = "aidiag.app:main"
+aidiag-dashboard = "aidiag.dashboard:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aidiag"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "SIM"]
+ignore = ["B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
