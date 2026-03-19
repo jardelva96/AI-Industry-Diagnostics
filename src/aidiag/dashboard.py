@@ -156,7 +156,7 @@ with tabs[1]:
             showlegend=False,
             height=450,
         )
-        st.plotly_chart(fig_radar, use_container_width=True)
+        st.plotly_chart(fig_radar, width="stretch")
 
         # Barras por dimensão
         st.subheader("Scores por Dimensão")
@@ -166,10 +166,9 @@ with tabs[1]:
             {"Dimensão": DIMENSIONS[k]["label"], "Score": v, "Nível": _level_for_score(v)}
             for k, v in sc.items()
         ])
-        colors = ["#d32f2f" if s < 2 else "#ff9800" if s < 3 else "#4caf50" if s < 4 else "#1b5e20" for s in values]
         fig_bar = px.bar(df_scores, x="Dimensão", y="Score", color="Nível", text="Score", height=400)
         fig_bar.update_layout(yaxis_range=[0, 5])
-        st.plotly_chart(fig_bar, use_container_width=True)
+        st.plotly_chart(fig_bar, width="stretch")
 
         # Recomendações
         st.subheader("Recomendações por Dimensão")
@@ -252,7 +251,7 @@ with tabs[2]:
             text="Duração", color="Fase", height=250,
         )
         fig_timeline.update_layout(showlegend=False, xaxis_title="Meses")
-        st.plotly_chart(fig_timeline, use_container_width=True)
+        st.plotly_chart(fig_timeline, width="stretch")
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -298,7 +297,7 @@ with tabs[3]:
             polar={"radialaxis": {"visible": True, "range": [0, 5]}},
             height=450,
         )
-        st.plotly_chart(fig_bench, use_container_width=True)
+        st.plotly_chart(fig_bench, width="stretch")
 
         # Tabela comparativa
         st.subheader("Comparação Detalhada")
@@ -314,7 +313,7 @@ with tabs[3]:
                 "Diferença": f"{diff:+.1f}",
                 "Posição": "Acima" if diff > 0.2 else ("Abaixo" if diff < -0.2 else "Na média"),
             })
-        st.dataframe(pd.DataFrame(comp_data), use_container_width=True, hide_index=True)
+        st.dataframe(pd.DataFrame(comp_data), width="stretch", hide_index=True)
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -385,7 +384,7 @@ with tabs[5]:
                 "Acurácia (treino)": f"{results['gradient_boosting']['train_accuracy']:.4f}",
             },
         ])
-        st.dataframe(model_comp, use_container_width=True, hide_index=True)
+        st.dataframe(model_comp, width="stretch", hide_index=True)
 
         # Feature importances
         st.subheader("Feature Importances")
@@ -404,7 +403,7 @@ with tabs[5]:
                 labels={"x": "Importância", "y": "Dimensão"},
                 height=300,
             )
-            st.plotly_chart(fig_imp, use_container_width=True)
+            st.plotly_chart(fig_imp, width="stretch")
 
         # Classification report
         st.subheader("Classification Report (Random Forest)")
@@ -420,7 +419,7 @@ with tabs[5]:
                     "F1-Score": f"{r['f1-score']:.3f}",
                     "Support": int(r["support"]),
                 })
-        st.dataframe(pd.DataFrame(report_rows), use_container_width=True, hide_index=True)
+        st.dataframe(pd.DataFrame(report_rows), width="stretch", hide_index=True)
 
 
 # ══════════════════════════════════════════════════════════════════════
