@@ -96,6 +96,14 @@ class DimensionDetail(BaseModel):
     recommendations: list[str]
 
 
+class QuickWin(BaseModel):
+    dimension: str
+    action: str
+    effort: str
+    expected_timeline: str
+    business_impact: str
+
+
 class DiagnosticReport(BaseModel):
     assessment_id: str
     company_name: str
@@ -104,6 +112,8 @@ class DiagnosticReport(BaseModel):
     dimensions: list[DimensionDetail]
     top_strengths: list[str]
     critical_gaps: list[str]
+    executive_summary: str = ""
+    quick_wins: list[QuickWin] = []
 
 
 # ── Roadmap ───────────────────────────────────────────────────────────
@@ -113,6 +123,9 @@ class RoadmapPhase(BaseModel):
     horizon: str
     actions: list[str]
     expected_impact: str
+    investment: str = ""
+    risks: list[str] = []
+    kpis: list[str] = []
 
 
 class RoadmapOut(BaseModel):

@@ -5,14 +5,15 @@ from __future__ import annotations
 from aidiag.services.roadmap_service import generate_roadmap
 
 
-def test_roadmap_has_three_phases(sample_assessment):
-    """Roadmap gera exatamente 3 fases."""
+def test_roadmap_has_four_phases(sample_assessment):
+    """Roadmap gera exatamente 4 fases."""
     roadmap = generate_roadmap(sample_assessment)
 
-    assert len(roadmap.phases) == 3
+    assert len(roadmap.phases) == 4
     assert roadmap.phases[0].phase == 1
     assert roadmap.phases[1].phase == 2
     assert roadmap.phases[2].phase == 3
+    assert roadmap.phases[3].phase == 4
 
 
 def test_roadmap_phases_have_actions(sample_assessment):

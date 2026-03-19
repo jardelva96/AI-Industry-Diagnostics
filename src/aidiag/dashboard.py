@@ -199,7 +199,7 @@ with tabs[1]:
 with tabs[2]:
     st.header("Roadmap de Adoção de IA")
     st.markdown(
-        "Plano de ação em 3 fases para evolução da maturidade em IA, "
+        "Plano de ação em 4 fases para evolução da maturidade em IA, "
         "gerado automaticamente com base nos gaps identificados na avaliação."
     )
 
@@ -234,21 +234,41 @@ with tabs[2]:
             st.subheader(f"Fase {phase.phase}: {phase.title}")
             st.caption(f"Horizonte: {phase.horizon}")
 
+            if phase.investment:
+                st.markdown(f"**Investimento estimado:** {phase.investment}")
+
             for action in phase.actions:
                 st.markdown(f"- {action}")
 
             st.info(f"Impacto esperado: {phase.expected_impact}")
+
+            if phase.kpis:
+                with st.expander(f"KPIs da Fase {phase.phase}"):
+                    for kpi in phase.kpis:
+                        st.markdown(f"- {kpi}")
+
+            if phase.risks:
+                with st.expander(f"Riscos da Fase {phase.phase}"):
+                    for risk in phase.risks:
+                        st.markdown(f"- {risk}")
+
             st.divider()
 
         # Timeline visual
         st.subheader("Visão Temporal")
+        _phase_starts = [0, 3, 9, 18]
+        _phase_durations = [3, 6, 9, 6]
         timeline_df = pd.DataFrame([
-            {"Fase": f"Fase {p.phase}: {p.title}", "Início": i * 6, "Duração": 6 if i < 2 else 12}
+            {
+                "Fase": f"Fase {p.phase}: {p.title}",
+                "Início": _phase_starts[i] if i < len(_phase_starts) else i * 6,
+                "Duração": _phase_durations[i] if i < len(_phase_durations) else 6,
+            }
             for i, p in enumerate(roadmap.phases)
         ])
         fig_timeline = px.bar(
             timeline_df, x="Duração", y="Fase", orientation="h",
-            text="Duração", color="Fase", height=250,
+            text="Duração", color="Fase", height=300,
         )
         fig_timeline.update_layout(showlegend=False, xaxis_title="Meses")
         st.plotly_chart(fig_timeline, width="stretch")
