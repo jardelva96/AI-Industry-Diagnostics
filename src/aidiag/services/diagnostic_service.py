@@ -158,8 +158,8 @@ _RECOMMENDATIONS: dict[str, dict[str, list[str]]] = {
             "conhecimento",
             "Lance um programa de data literacy para gestores e líderes de área (workshops de 8h) — "
             "líderes que não entendem dados tomam decisões piores e bloqueiam iniciativas de IA",
-            "Identifique 2-3 profissionais internos com aptidão analítica e ofereça bolsa para "
-            "formação em dados/IA — profissionais que conhecem o negócio e aprendem IA são mais "
+            "Identifique 2-3 profissionais internos com aptidão analítica e patrocine formação "
+            "em dados/IA — profissionais que conhecem o negócio e aprendem IA são mais "
             "valiosos que cientistas de dados sem contexto do setor",
             "Crie uma comunidade interna de dados (canal no Slack/Teams, encontros mensais) para "
             "compartilhar aprendizados e boas práticas — cultura de dados começa com comunidade",

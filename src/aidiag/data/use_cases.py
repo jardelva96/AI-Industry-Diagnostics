@@ -1,6 +1,6 @@
 """Catálogo de casos de uso de IA por setor industrial.
 
-Casos de uso abrangentes e realistas voltados ao setor produtivo paulista,
+Casos de uso abrangentes e realistas voltados ao setor produtivo brasileiro,
 cobrindo manufatura, automotivo, agronegócio, logística, varejo, saúde,
 financeiro e energia. Cada caso de uso inclui descrição orientada a valor
 de negócio, complexidade de implementação, impacto estimado, maturidade

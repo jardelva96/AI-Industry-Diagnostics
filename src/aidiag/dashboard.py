@@ -21,7 +21,7 @@ from aidiag.services.roadmap_service import generate_roadmap
 
 # ── Configuração ──────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="AI Industry Diagnostics — CDII",
+    page_title="AI Industry Diagnostics",
     page_icon="🏭",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -29,9 +29,7 @@ st.set_page_config(
 
 st.title("AI Industry Diagnostics")
 st.markdown(
-    "**Plataforma de diagnóstico de maturidade em Inteligência Artificial para o setor produtivo.**  \n"
-    "Desenvolvida no contexto do CPA **CDII — Ciência de Dados para a Indústria Inteligente** "
-    "(FAPESP 2023/14427-8) | ICMC-USP / AI2."
+    "**Plataforma de diagnóstico de maturidade em Inteligência Artificial para o setor produtivo.**"
 )
 st.caption(
     "Fluxo recomendado: preencha a **Avaliação** → consulte o **Diagnóstico** → "
@@ -485,7 +483,7 @@ with tabs[4]:
     st.markdown(
         "Compare o nível de maturidade da empresa com a **média do setor** no Brasil. "
         "Benchmarks baseados em pesquisas de mercado (McKinsey, Gartner, MIT CISR) "
-        "adaptados para o contexto do **setor produtivo paulista**."
+        "adaptados para o contexto do **setor produtivo brasileiro**."
     )
     st.caption(
         "O benchmark responde à pergunta mais frequente da liderança: "
@@ -649,21 +647,20 @@ with tabs[5]:
 with tabs[6]:
     st.header("Sobre o Projeto")
     st.markdown("""
-### Contexto Institucional
+### Visão Geral
 
-O **AI Industry Diagnostics** foi desenvolvido no contexto do **CPA CDII — Ciência de Dados
-para a Indústria Inteligente**, um Centro de Pesquisa Aplicada apoiado pela FAPESP
-(processo 2023/14427-8), sediado no **ICMC-USP** com parceria do **AI2 — Advanced Institute
-for Artificial Intelligence**.
+O **AI Industry Diagnostics** é uma plataforma de diagnóstico de maturidade em
+Inteligência Artificial voltada ao setor produtivo. Oferece um framework estruturado
+para avaliar onde a empresa está hoje, identificar oportunidades de maior impacto e
+construir um roadmap realista de adoção.
 
 ### O Papel do Consultor de Diagnóstico em IA
 
-O consultor atua como **ponte entre a academia e o setor produtivo**:
+O consultor atua como **ponte entre tecnologia e negócio**:
 - **Visita empresas** e mapeia oportunidades reais de uso de IA
 - **Aplica o framework** de diagnóstico de 30 perguntas em 6 dimensões
 - **Elabora roadmaps** de adoção personalizados com fases, KPIs e riscos
 - **Apresenta resultados** à diretoria com linguagem executiva
-- **Conecta demandas** da indústria com pesquisadores do CPA
 
 ### Metodologia de Diagnóstico
 
@@ -677,13 +674,12 @@ O consultor atua como **ponte entre a academia e o setor produtivo**:
 
 ### Setores Atendidos
 
-Manufatura, Automotivo, Agronegócio, Logística, Varejo, Saúde, Financeiro e Energia —
-setores que compõem o setor produtivo do Estado de São Paulo e são foco do CPA CDII.
+Manufatura, Automotivo, Agronegócio, Logística, Varejo, Saúde, Financeiro e Energia.
 
 ### Autor
 
 **Jardel Vieira Alves**
-Consultor de Diagnóstico em IA | CPA CDII — ICMC-USP / AI2
+Consultor de Diagnóstico em IA
     """)
 
 

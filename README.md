@@ -4,8 +4,6 @@
 
 Sua empresa sabe que precisa adotar IA, mas não sabe por onde começar? Este projeto oferece uma metodologia estruturada para avaliar onde sua organização está hoje, identificar as maiores oportunidades de ganho e construir um plano de ação realista para os próximos 6 a 24 meses.
 
-Desenvolvido no contexto do CPA **CDII -- Ciência de Dados para a Indústria Inteligente** (FAPESP, processo 2023/14427-8), sediado no ICMC-USP em parceria com o **AI2 -- Advanced Institute for Artificial Intelligence**.
-
 [![CI](https://github.com/jardelva96/AI-Industry-Diagnostics/actions/workflows/ci.yml/badge.svg)](https://github.com/jardelva96/AI-Industry-Diagnostics/actions)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -85,7 +83,7 @@ Reuniões periódicas para acompanhar a execução do roadmap, recalibrar priori
 
 ## Setores Atendidos
 
-O framework foi calibrado para os principais setores industriais do Estado de São Paulo, com benchmarks específicos para cada um:
+O framework foi calibrado para os principais setores da indústria brasileira, com benchmarks específicos para cada um:
 
 | Setor | Exemplos de aplicação de IA |
 |-------|----------------------------|
@@ -155,16 +153,6 @@ Comparação da empresa com as médias do seu setor, baseada em dados de pesquis
 
 ---
 
-## Vinculação Institucional
-
-Este projeto é parte das atividades de **Consultoria de Diagnóstico em IA** vinculadas à bolsa FAPESP TT-V no contexto do CPA CDII (processo 2023/14427-8).
-
-**Missão:** Conectar a pesquisa de ponta produzida no ICMC-USP e no AI2 com as necessidades reais da indústria paulista, acelerando a adoção responsável de IA no setor produtivo brasileiro.
-
-O trabalho envolve visitas presenciais a empresas industriais, mapeamento de oportunidades de aplicação de IA, criação de roadmaps de adoção personalizados e a construção de uma ponte permanente entre a academia e a indústria.
-
----
-
 ## Como Executar a Ferramenta
 
 ```bash
@@ -201,5 +189,5 @@ chmod +x run.sh && ./run.sh
 ## Autor
 
 **Jardel Vieira Alves**
-Consultor de Diagnóstico em IA -- Bolsista FAPESP TT-V
-AI2 / ICMC-USP -- Projeto CDII (FAPESP 2023/14427-8)
+Consultor de Diagnóstico em IA
+[github.com/jardelva96](https://github.com/jardelva96)
